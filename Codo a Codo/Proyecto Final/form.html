@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoyame</title>
+</head>
+<body>
+    <header style="background-color: darkred;">
+        <nav>
+            <a style="background-color: red;" href="index.html">Home</a>
+            <a style="background-color: red;" href="about.html">Acerca de mi</a>
+            <a style="background-color: red;" href="contact.html">Contacto</a>
+            <a style="background-color: red;" href="location.html">Localización</a>
+            <a style="background-color: red;" href="form.html">Apoyame</a>
+        </nav>
+        <h1 style="text-align: center;"> Mi Porfolio</h1>
+    </header>
+    <menu>
+        <h2>¡Apoyame!</h2>
+        <img src="img/apoyame.jpg" alt="imagen de apoyame o doname" width="500">
+        <br>
+        <h3>Formulario de Registro</h3>
+        <form action="show_data.html" target="_blank">
+            <label for="firstname">Nombre: </label> <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre aqui..."> <br><br>
+            <label for="lastname">Apellido: </label> <input type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido aqui..."> <br><br>
+            <label for="street">Dirección: </label> <input type="text" name="address" id="address" placeholder="Ingrese su dirección aqui..."> <br><br>
+            <label for="city">Ciudad: </label> <input type="text" name="city" id="city" value="C.A.B.A."> <br><br>
+            <label for="zipcode">Codigo Postal: </label> <input type="number" name="zipcode" id="zipcode" placeholder="Ingrese su codigo postal aqui..."> <br><br>
+            <label for="BirthDate">Fecha de Nacimiento: </label> <input type="date" name="BirthDate" id="BirthDate"> <br><br>
+            <label for="email"> Mail: </label> <input type="email" name="email" id="email" placeholder="Ingrese su mail aqui..."> <br><br>
+            <label for="phone">Telefono: </label> <input type="number" name="phone" id="phone" placeholder="Ingrese su telefono aqui..."> <br><br>
+            <p> Genero: 
+                <input type="radio" name="gender" id="gender" value="Hombre">Hombre
+                <input type="radio" name="gender" id="gender" value="Mujer">Mujer
+                <input type="radio" name="gender" id="gender" value="Otro" checked>Otro
+            </p>
+            <p> Estudios: 
+                <input type="checkbox" name="estudio" id="estudio" value="Primario">Primario
+                <input type="checkbox" name="estudio" id="estudio" value="Secundario">Secundario
+                <input type="checkbox" name="estudio" id="estudio" value="Terciario">Terciario
+                <input type="checkbox" name="estudio" id="estudio" value="Universitario">Universitario
+                <input type="checkbox" name="estudio" id="estudio" value="Otro">Otro
+            </p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+        <p><b>Si usted hace click en el boton "Enviar", la informacion sera enviada a la pagina "show_data.html".</b></p>
+    </menu>
+    <footer style="background-color: darkred;">
+        <br>
+        <p style="text-align: center;">Derechos Reservador @2022 - Tomás Agustín Friz</p>
+    </footer>
+</body>
+</html>
