@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector descendiente</title>
+    <link rel="stylesheet" href="selector-descendiente.css">
+
+    <style>
+        div>i {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><i>Esto está en cursiva</i></p>
+        <i>Esto está en cursiva, pero no en un párrafo.</i>
+        <p>Esto está en <b>boldface <i>y cursiva</i></b></p>
+    </div>
+</body>
+
+</html>

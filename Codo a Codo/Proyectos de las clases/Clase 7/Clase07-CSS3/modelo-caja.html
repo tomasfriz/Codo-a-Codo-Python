@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 20px;
+        }
+
+        div {
+            background-color: lightcoral;
+            /*margin: 20px;*/
+        }
+
+        div p {
+            border: 2px dotted blue;
+            /*contenedor general*/
+            padding: 30px;
+            margin: 20px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <b>Contenedor principal</b>
+        <p>Este es un párrafo que está dentro del DIV</p>
+
+        <div>
+            Este texto está dentro de un DIV dentro del DIV anterior
+        </div>
+    </div>
+    <p>Este es un párrafo que está directamente dentro del BODY</p>
+</body>
+
+</html>

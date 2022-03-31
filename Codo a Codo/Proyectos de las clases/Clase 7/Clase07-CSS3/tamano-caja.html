@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja</title>
+    <style>
+
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 1px;
+        }
+
+        .ejemplo1 {
+            background-color: lightcoral;
+            width: 300px;
+            height: 150;
+        }
+
+        .ejemplo2 {
+            background-color: lightgreen;
+            width: 300px;
+            height: auto;
+        }
+
+        .ejemplo3 {
+            background-color: lightskyblue;
+            width: auto;
+            height: auto;
+            min-width:300px;
+            max-width:600px;            
+        }
+
+        .ejemplo4 {
+            background-color: lightskyblue;
+            width: 300px;
+            height: 100px;    
+            overflow: hidden;    
+        }       
+
+        .ejemplo5 {
+            background-color: lightskyblue;
+            width: 300px;
+            height: 100px;    
+            overflow: scroll;    
+        }       
+        
+        .ejemplo6 {
+            background-color: lightskyblue;
+            width: 300px;
+            height: 100px;    
+            overflow: visible;    
+        }             
+
+
+    </style>
+</head>
+
+<body>
+    <h3>Div de tamaño fijo, en px</h3>
+    <div class="ejemplo1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi obcaecati ad provident aut magni officia saepe debitis soluta repellendus hic.
+    </div>
+
+    <h3>Div de ancho fijo y alto en "auto"</h3>
+    <div class="ejemplo2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi obcaecati ad provident aut magni officia saepe debitis soluta repellendus hic.
+    </div>
+
+    <h3>Div de ancho en "auto", con un min-width y max-width</h3>
+    <div class="ejemplo3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi obcaecati ad provident aut magni officia saepe debitis soluta repellendus hic.
+    </div>
+
+    <h3>Div con overflow hidden</h3>
+    <div class="ejemplo4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi obcaecati ad provident aut magni officia saepe debitis soluta repellendus hic.
+    </div>
+
+    <h3>Div con overflow y scroll</h3>
+    <div class="ejemplo5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi obcaecati ad provident aut magni officia saepe debitis soluta repellendus hic.
+    </div>
+
+    <h3>Div con overflow visible</h3>
+    <div class="ejemplo6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi obcaecati ad provident aut magni officia saepe debitis soluta repellendus hic.
+    </div>    
+
+    
+</body>
+
+</html>
