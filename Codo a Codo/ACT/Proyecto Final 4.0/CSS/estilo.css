@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 100;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+}
+
+header{
+    background-color: rgb(24,38,38);
+    color: whitesmoke;
+    width: 100%;
+}
+
+body{
+    background-color:darkslategray;
+    color: white;
+}
+
+menu{
+    margin-top: 50px;
+}
+
+.nav{
+    background-color: rgb(139,181,181);
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+footer{
+    background-color: rgb(24,38,38);
+    width: 100%; 
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 10px;
+}
+
+input[type=text],input[type=number],input[type=date],input[type=email]{
+    width: 80%;
+    padding: 1vw;
+    margin: 1vw;
+    display: inline-block;
+    border: 1vw;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 90%;
+    background-color: darkgreen;
+    color: white;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=reset]{
+    width: 90%;
+    background-color: darkred;
+    color: white;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: green;
+}
+
+input[type=reset]:hover{
+    background-color: brown;
+}
+
+form{
+    border-radius: 10px;
+    background-color:darkcyan;
+    padding: 5%;
+    margin: 5% 10%;
+}
+
+.redsoc{
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* .redsoc a{
+    color: maroon;
+    margin: 100px;
+}
+
+.redsoc a:hover{
+    color: red;
+} */
