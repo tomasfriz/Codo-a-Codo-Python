@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores avanzados</title>
+
+    <style>
+        /* p {
+          background-color: coral;
+        } */
+
+        div#menu * {
+            background-color: yellowgreen;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3>Selectores avanzados</h3>
+
+    <p>Permiten ir más allá de la selección básica de los elementos. Utilizan “combinadores”, signos gráficos que  establecen la relación entre los elementos y permiten hacer una selección específica. Tenemos varios métodos  para seleccionar elementos dependiendo de la estructura del documento HTML.</p>
+
+    <h3>Selector universal</h3>
+
+    <p>El selector universal no solamente permite seleccionar todos los elementos de un documento HTML, sino también aquellos que pertenezcan a un id o clase específica. En el ejemplo se observa cómo se seleccionan todos los elementos contenidos en un div cuyo id es ‘menu’.</p>
+
+    <div id="menu">
+        <p>Parrafo 1, dentro del div.</p>
+        <p>Parrafo 2, dentro del div.</p>
+        Texto sin etiqueta
+        <b>texto en boldface </b> <i>Texto en italica</i> 
+    </div>
+
+    <p>Parrafo 3, fuera del div. (no es afectado</p>
+
+    <div>
+        <p>Parrafo 4, dentro de un div sin el id="menu".</p>
+        Texto sin etiqueta
+        <b>texto en boldface </b> <i>Texto en italica</i> 
+    </div>
+
+
+
+
+  
+
+</body>
+
+</html>
