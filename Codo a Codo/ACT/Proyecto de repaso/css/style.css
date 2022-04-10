@@ -12,20 +12,41 @@ body,
 header,
 main,
 footer {
-    border: 3px red solid;
+    /* border: 3px red solid; */
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
 }
 
+body {
+    background-color: #F2F2F2;
+    /* background-color: grey; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 main {
     min-height: 200px;
     overflow: auto;
+    background-color: white;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    /* margin-top: 0; */
+}
+
+header {
+    background: #FFF;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    /* margin-bottom: 0px; */
+}
+
+footer {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+
 }
 
 /* contenido ppal */
 main>div {
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     min-height: 180px;
     margin: 0.5rem;
     height: auto;
@@ -34,26 +55,69 @@ main>div {
 }
 
 main>aside {
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     min-height: 180px;
-    min-width: 25%;
+    min-width: 32%;
     margin: 0.5rem;
     float: left;
     width: auto;
 }
 
 .secciones {
-    border: 2px green solid;
+    /* border: 2px green solid; */
     min-height: 50px;
     margin: 0.5rem;
 }
 
-.secciones article{
-    border: 2px purple solid;
+.secciones article {
+    /* border: 2px purple solid; */
     margin: 0.5rem;
     min-height: 20px;
 }
 
-#gif-ppal{
+#gif-ppal {
     width: 100%;
+}
+
+/* logo y menu */
+.header-logo{
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.header-menubar {
+    /* border: 2px green solid; */
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.header-menubar ul {
+    list-style: none;
+}
+
+.header-menubar li {
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    /* padding: 0.5rem; */
+    margin: 0 0.5rem 0;
+}
+
+.header-menubar a{
+    text-decoration: none;
+    color: black;
+}
+
+.header-menubar a:hover{
+    color: rgb(221,11,97);
+}
+
+.header-menubar li a{
+    font-size: 1.2rem;
+    background: transparent;
 }
