@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Declaro clase
+        class Perro { 
+            static contador = 9  //Declaro el valor inicial de la propiedad estática
+            constructor(nombre, edad, vivo = true){
+                this.nombre = nombre;
+                this.edad = edad;
+                this.vivo = vivo;
+                Perro.contador++;
+            }
+            static presentacionPerro(){
+                return "Soy un método de clase, no de cada objeto. [" + this.contador + "] <br>"
+            }
+
+            //Metodos
+            ladrar() { return "Guau!" }
+            presentar() { return "Soy " + this.nombre + " y tengo " + this.edad +" años. <br>" }
+            get Nombre() { return this.nombre }
+            set Nombre(nombre) { this.nombre = nombre }
+            get Edad() { return this.edad }
+            set Edad(edad) { this.edad = edad }
+            get Vivo() { return this.vivo }
+            set Vivo(vivo) { this.vivo = vivo }            
+        }
+
+
+        const perro1 = new Perro("Juan", 3 )
+        console.log(Perro.presentacionPerro())
+
+        perro1.altura = 60
+        console.log(perro1.altura)
+        perro1.altura = 80
+        console.log(perro1.altura)        
+
+    </script>
+</body>
+
+</html>
