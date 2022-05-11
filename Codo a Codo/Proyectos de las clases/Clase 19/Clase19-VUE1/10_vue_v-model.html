@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - v-model</title>
+</head>
+
+<body>
+    <h3>Vue - v-model</h3>
+    <hr>
+    <div id="aplicacion">
+        <p>Tamaño de la fuente:
+            <input type="range" v-model="fontSize" min=10 max=100>( {{fontSize}} px)
+        </p>
+        <p>Color:
+            <input type="color" v-model="colorTxt">
+        </p>
+
+        <p v-bind:style="{'font-size':fontSize +'px', 'color': colorTxt}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, veniam.</p>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#aplicacion',
+            data: {
+                fontSize: 20,
+                colorTxt: '#000000'
+            }
+        })
+    </script>
+</body>
+
+</html>

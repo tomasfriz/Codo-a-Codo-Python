@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - Bucle for</title>
+</head>
+
+<body>
+    <h3>Vue - v-for</h3>
+    <hr>
+    
+    <ul id="miLista">
+        <li v-for="persona in personas">
+            cliente {{persona }}: {{persona.nombre}} {{persona.apellido}} 
+        </li>
+    </ul>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#miLista',
+            data: {
+                personas: [
+                    {nombre: "Juan", apellido: "Ramirez"},
+                    {nombre: "Ana", apellido: "Fernandez"},
+                    {nombre: "Sol", apellido: "Alvarez"}
+                ]
+
+            }
+        })    
+        
+    // ¿Que pasa si uso uno de esos parámetros en otro sitio del HTML?
+    // ¿Puedo "reutilizar" nombres de parámetros?
+        
+    </script>
+
+    
+
+
+</body>
+
+</html>

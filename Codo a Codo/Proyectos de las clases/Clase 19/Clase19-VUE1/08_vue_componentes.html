@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE: Componentes</title>
+</head>
+
+<body>
+    <h3>VUE: Componentes</h3>
+    <hr>
+
+
+    <div id="component_test">
+        <testcomponent></testcomponent>
+    </div>
+    <div id="component_test1">
+        <testcomponent></testcomponent>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        // Dentro del componente se agrega un template
+        // el cual tiene asignado código HTML.
+        // Esta es la manera de registrar globalmente
+        // un componente en Vue.JS.
+        Vue.component('testcomponent', {
+            template: '<div><h1>Esto es un componente creado con Vue</h1></div>'
+        });
+
+        const vm = new Vue({
+            el: '#component_test',
+        });
+
+        const vm1 = new Vue({
+            el: '#component_test1'
+        });
+
+    </script>
+
+
+</body>
+
+</html>

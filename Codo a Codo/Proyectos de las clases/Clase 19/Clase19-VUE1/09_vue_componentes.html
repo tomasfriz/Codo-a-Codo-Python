@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE: Componentes</title>
+</head>
+
+<body>
+    <h3>VUE: Componentes</h3>
+    <p>Se puede modificar el comportamiento de un componente global dentro de una instancia Vue.</p>
+    <hr>
+
+
+    <div id="component_test">
+        <testcomponent></testcomponent>
+    </div>
+
+    <div id="component_test1">
+        <testcomponent></testcomponent>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        // -------------------------------------------
+        // El template dentro del componente hace que
+        // cuando el mouse se posicione encima del mismo
+        // ejecute la función changename() y cuando el
+        // mismo salga del componente se ejecute la 
+        // función originalname(). Ambas funciones 
+        // trabajan sobre la propiedad name del 
+        // componente, cambiandola.
+        // -------------------------------------------
+        Vue.component('testcomponent',
+            {
+                template: '<div v-on:mouseover = "cambiarNombre()" v-on:mouseout = "nombreOriginal();"><h1>Componente creado por <span id = "name">{{name}}</span></h1></div>',
+                data: function () {
+                    return {
+                        name: "Mariana"
+                    }
+                },
+
+                methods: {
+                    cambiarNombre: function () {
+                        this.name = "Esteban";
+                    },
+
+                    nombreOriginal: function () {
+                        this.name = "Mariana";
+                    }
+                }
+            });
+
+        // -------------------------------------------
+        const vm = new Vue({
+            el: '#component_test'
+        });
+
+        // -------------------------------------------
+        const vm1 = new Vue({
+            el: '#component_test1'
+        });
+
+    </script>
+
+
+</body>
+
+</html>

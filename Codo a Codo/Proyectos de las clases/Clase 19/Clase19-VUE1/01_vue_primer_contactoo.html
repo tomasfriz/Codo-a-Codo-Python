@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer ejemplo con VUE</title>
+</head>
+
+<body>
+    <h3>Primer ejemplo con VUE</h3>
+    <hr>
+
+    <!-- El div presente tiene un mensaje en una INTERPOLACION {{}}. Esto interactúa con Vue.JS y muestra los datos en el navegador.  -->
+
+    <div id="app">
+        {{ message }}   <!-- Esta interpolacion interactúa con Vue -->
+    </div>
+
+
+    <!-- Para mostrar el valor del mensaje en el DOM, se crea una instancia de Vue.JS. 
+    Se llama a la instancia de Vue, la cual toma el ID del elemento del DOM, por ejemplo ‘#app. 
+    Vue interactúa con el DOM y cambia el valor en el DOM {{message}} con el mensaje ‘Hola Vue!’. -->
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>        
+        var app = new Vue({          // Creamos la instancia de Vue
+            el: '#app',              // Elemento?
+            data: {                  // Datos 
+                message: 'Hola Vue!'
+            }
+        })
+    </script>
+
+</body>
+
+</html>
