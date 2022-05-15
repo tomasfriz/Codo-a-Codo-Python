@@ -63,7 +63,7 @@ footer{
     margin: 0px auto;
 }
 
-input[type=text],input[type=number],input[type=date],input[type=email]{
+input[type=text],input[type=tel],input[type=email]{
     width: 80%;
     padding: 1vw;
     margin: 1vw;
@@ -115,3 +115,4 @@ form{
     margin: 10px;
     text-decoration: none;
 }
+
