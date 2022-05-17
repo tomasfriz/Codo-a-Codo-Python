@@ -1,37 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman';
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-header{
-    background-color: rgb(24,38,38);
+header {
+    background-color: rgb(24, 38, 38);
     color: whitesmoke;
     width: 100%;
     padding: 20px 0px 20px;
     margin: 0px auto;
 }
 
-body{
+body {
     background-image: url("../img/patron_dragones.png");
     margin: 0px;
     color: white;
 }
 
-.principal{
-    background-color:darkslategray;
+.principal {
+    background-color: darkslategray;
     width: 1000px;
     padding: 30px 50px;
     margin: 0 auto;
     text-align: center;
 }
 
-.navegacion{
-    background-color: rgb(139,181,181);
+.navegacion {
+    background-color: rgb(139, 181, 181);
     color: white;
     border-radius: 5px;
     margin: 10px;
@@ -39,31 +39,33 @@ body{
     text-decoration: none;
 }
 
-.separacion{
+.separacion {
     margin: 10px;
     padding: 10px;
 }
 
-.tabla{
+.tabla {
     text-align: left;
     margin-top: 20px;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: lightslategrey;
 }
 
-footer{
-    background-color: rgb(24,38,38);
-    width: 100%; 
+footer {
+    background-color: rgb(24, 38, 38);
+    width: 100%;
     color: whitesmoke;
     text-align: center;
     padding: 30px 0px 30px;
     margin: 0px auto;
 }
 
-input[type=text],input[type=tel],input[type=email]{
+input[type=text],
+input[type=tel],
+input[type=email] {
     width: 80%;
     padding: 1vw;
     margin: 1vw;
@@ -73,7 +75,7 @@ input[type=text],input[type=tel],input[type=email]{
     box-sizing: border-box;
 }
 
-input[type=submit]{
+input[type=submit] {
     width: 90%;
     background-color: darkgreen;
     color: white;
@@ -83,7 +85,8 @@ input[type=submit]{
     border-radius: 10px;
     cursor: pointer;
 }
-input[type=reset]{
+
+input[type=reset] {
     width: 90%;
     background-color: darkred;
     color: white;
@@ -94,25 +97,24 @@ input[type=reset]{
     cursor: pointer;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
     background-color: green;
 }
 
-input[type=reset]:hover{
+input[type=reset]:hover {
     background-color: brown;
 }
 
-form{
+form {
     border-radius: 10px;
-    background-color:darkcyan;
+    background-color: darkcyan;
     padding: 5%;
     margin: 5% 10%;
 }
 
-.redsoc{
+.redsoc {
     color: whitesmoke;
     text-align: center;
     margin: 10px;
     text-decoration: none;
 }
-

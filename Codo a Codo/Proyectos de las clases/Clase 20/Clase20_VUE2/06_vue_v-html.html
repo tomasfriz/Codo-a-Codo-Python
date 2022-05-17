@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - v-html</title>
+</head>
+
+<body>
+    <h3>Vue - v-html</h3>
+    <hr>
+
+    <div id="misDatos">
+        <h5>Apellido: {{apellido}}</h5>
+        <h5>{{nombre}}</h5>
+        <h5>Documento: {{dni}}</h5>
+        <h5>Edad: {{edad}} años</h5>
+        <div v-html="mensaje"></div>
+        <!-- Cuidado con la sintaxis   -->
+        <div v-html="imagen"></div>
+        <!-- (No es una interpolación) -->
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#misDatos',
+            data: {
+                nombre: "Juan Carlos",
+                apellido: "Fernandez",
+                dni: "DNI 28.453.234",
+                edad: 34,
+                mensaje: "<h5 style='color: red;'>Esto es HTML desde Vue.</h5>",
+                imagen: "<img src='vuejs.png' alt='¿Qué es vuejs?' width='300'>"
+            }
+        })
+    </script>
+
+</body>
+
+</html>

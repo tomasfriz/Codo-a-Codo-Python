@@ -3,15 +3,13 @@
 // con return. Caso contrario, al final se realiza 
 // efectivamente el envio de los datos.
 
-function valida_envia() 
-{
+function valida_envia() {
     //valido el nombre
-    if (document.formulario.firstname.value.length == 0) 
-    {
+    if (document.formulario.firstname.value.length == 0) {
         alert("Tiene que escribir su nombre")
         document.formulario.firstname.focus()
         return 0;
-    }else{
+    } else {
         //firstname = document.formulario.firstname.value;
         //firstname = validarLetras(firstname);
         //document.formulario.firstname.value = firstname;
@@ -23,12 +21,11 @@ function valida_envia()
     }
 
     //valido el apellido
-    if (document.formulario.lastname.value.length == 0) 
-    {
+    if (document.formulario.lastname.value.length == 0) {
         alert("Tiene que escribir su apellido")
         document.formulario.lastname.focus()
         return 0;
-    }else{
+    } else {
         //lastname = document.formulario.lastname.value;
         //lastname = validarLetras(lastname);
         //document.formulario.lastname.value = lastname;
@@ -40,8 +37,7 @@ function valida_envia()
     }
 
     //valido el email
-    if (document.formulario.email.value.length == 0) 
-    {
+    if (document.formulario.email.value.length == 0) {
         alert("Tiene que escribir su email")
         document.formulario.email.focus()
         return 0;
@@ -51,16 +47,14 @@ function valida_envia()
     phone = document.formulario.phone.value;
     phone = validarEntero(phone);
     document.formulario.phone.value = phone;
-    if (phone == "") 
-    {
+    if (phone == "") {
         alert("Tiene que introducir números enteros en su telefono.")
         document.formulario.phone.focus()
         return 0;
     }
 }
 
-function validarEntero(valor)
-{
+function validarEntero(valor) {
     //intento convertir a entero.
     //si era un entero no le afecta, si no lo era lo intenta convertir
     valor = parseInt(valor);
@@ -74,8 +68,7 @@ function validarEntero(valor)
     }
 }
 
-function validarLetras(valor)
-{
+function validarLetras(valor) {
     //intento convertir a entero.
     //si era un entero no le afecta, si no lo era lo intenta convertir
     valor = parseInt(valor);

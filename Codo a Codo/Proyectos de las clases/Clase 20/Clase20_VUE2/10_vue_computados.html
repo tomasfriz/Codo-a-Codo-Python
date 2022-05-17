@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - Agregar Items</title>
+</head>
+
+<body>
+
+    <!-- https://es.vuejs.org/v2/api/#computed 
+         https://es.vuejs.org/v2/guide/events.html-->
+    <h3>Vue - Agregar Items</h3>
+    <hr>
+    <div id="app">
+        <p>Lista de frutas:</p>
+        <div>
+            <div>
+                <!-- agregar frutas -->
+                <div>
+                    <!-- Evento keyUp: Nos permite disparar un método una vez que se levanta una tecla. -->
+                    <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFrutas">
+                    <button @click="agregarFrutas">Agregar nueva fruta</button>
+                </div>
+
+                <!-- lista de frutas -->
+                <ul>
+                    <li v-for="fruta of frutas">
+                        Hay {{fruta.cantidad}} unidades de {{fruta.nombre}}.
+                        <span v-if="fruta.cantidad === 0">SIN STOCK</span>
+                        <span v-else-if="fruta.cantidad <= 0" style="color:red">(Error)</span>
+
+                        <div>
+                            <button @click="fruta.cantidad++">+</button>
+                            <button @click="fruta.cantidad--">-</button>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- total frutas -->
+                <p>Total de frutas : <b>{{sumarFrutas}}</b></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                frutas: [{
+                    nombre: 'manzanas',
+                    cantidad: 13
+                }, {
+                    nombre: 'bananas',
+                    cantidad: 5
+                }, {
+                    nombre: 'peras',
+                    cantidad: 10
+                }, {
+                    nombre: 'naranjas',
+                    cantidad: 7
+                }],
+                nuevaFruta: "",
+                totalFrutas: 1
+            },
+            methods: {
+                agregarFrutas() {
+                    this.frutas.push({
+                        nombre: this.nuevaFruta,
+                        cantidad: 1
+                    });
+                    this.nuevaFruta = ""
+                }
+            },
+            computed: {
+                sumarFrutas() {
+                    this.totalFrutas = 0;
+                    for (fruta of this.frutas) {
+                        this.totalFrutas += fruta.cantidad;
+                    }
+                    return this.totalFrutas;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

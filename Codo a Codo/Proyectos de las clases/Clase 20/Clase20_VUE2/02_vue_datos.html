@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - Datos</title>
+</head>
+
+<body>
+    <h3>Vue - Datos</h3>
+    <hr>
+    
+    <div id="misDatos">
+        <h4>Apellido: {{apellido}}</h4>
+        <h4>Nombre: {{nombre}}</h4>
+        <h4>Documento: {{dni}}</h4>
+        <h4>Edad: {{edad}} años</h4>
+    </div>
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#misDatos',
+            data: {
+                nombre: "Juan Carlos",
+                apellido: "Fernandez",
+                dni: "DNI 28.453.234",
+                edad: 34
+            }  // Para ir pensando: podriamos tener datos de varios objetos!
+        })    
+        
+    // ¿Que pasa si uso uno de esos parámetros en otro sitio del HTML?
+    // ¿Puedo "reutilizar" nombres de parámetros?
+        
+    </script>
+
+    
+
+
+</body>
+
+</html>

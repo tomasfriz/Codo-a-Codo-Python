@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - v-on</title>
+</head>
+
+<body>
+    <script>
+        // Agrega una escucha de evento (event listener)
+        // al elemento. El tipo del evento es denotado
+        // por el argumento. 
+        // https://es.vuejs.org/v2/api/#v-on
+    </script>
+
+    <h3>Vue - v-on</h3>
+    <hr>
+    <div id="aplicacion">
+        <button v-on:click="contador +=1">Sumar uno</button>
+        <button v-on:click="contador -=1">Restar uno</button>
+        <button v-on:click="contador = 0">Poner a cero</button>
+        <p>El contador tiene un valor de {{contador}}.</p>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#aplicacion',
+            data: {
+                contador: 5
+            }
+        })
+    </script>
+</body>
+
+</html>
