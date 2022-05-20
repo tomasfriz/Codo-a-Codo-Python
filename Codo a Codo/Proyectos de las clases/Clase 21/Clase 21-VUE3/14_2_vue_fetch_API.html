@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE - Fetch (API)</title>
+</head>
+
+<body>
+    <h3>Fetch (API) con VUE</h3>
+    <hr>
+
+    <div id="contenido">
+        <button onclick="app.traerDatosAPI()">Obtener datos</button>
+        <!-- Aquí insertaremos contenido del archivo JSON -->
+        <div v-html="HTML_a_mostrar"></div>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#contenido',
+            data: {
+                HTML_a_mostrar: ""
+            },
+
+            methods: {
+                traerDatosAPI: function() {
+                    fetch('https://randomuser.me/api') //Esta API provee datos en formato json
+                        .then(datos => datos.json()) //res va a guardar el dato mediante el método .json()
+                        .then(datos => this.HTML_a_mostrar =
+                            `<img src = "${datos.results[0].picture.large}"</img>
+                             <p>Nombre: ${datos.results[0].name.first}</p>
+                             <p>Mail: ${datos.results[0].email}</p>`)
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

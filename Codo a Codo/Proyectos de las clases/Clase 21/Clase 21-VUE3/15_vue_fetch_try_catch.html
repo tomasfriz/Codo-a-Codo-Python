@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try - catch</title>
+</head>
+
+<body>
+    <h3>try - catch</h3>
+    <hr>
+
+    <div>
+        <button onclick="traerDatosArchivo()">Llamar a la funcion</button>
+    </div>
+
+    <div id="contenido">
+        <!-- Aquí insertaremos contenido  -->
+    </div>
+
+    <!-- Nuestro script ------------------------------>
+    <script>
+        var HTML_a_mostrar = document.querySelector('#contenido');
+
+        const traerDatosArchivo = () => {
+            try {
+                let a = [1, 2, 3]
+                //a = null
+                let b = a[0]
+                HTML_a_mostrar.innerHTML += "Todo ha salido bien<br>"
+            } catch (error) {
+                HTML_a_mostrar.innerHTML += "Algo fallo: " + error + "<br>"
+            }
+            HTML_a_mostrar.innerHTML += "<br>La función ha finalizado.<br>"
+        }
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

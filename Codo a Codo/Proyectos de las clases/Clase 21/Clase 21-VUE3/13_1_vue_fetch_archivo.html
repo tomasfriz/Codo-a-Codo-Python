@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE: Fetch (Archivo)</title>
+</head>
+
+<body>
+    <h3>VUE: Fetch (Archivo) - Sin usar VUE</h3>
+    <hr>
+
+    <div>
+        <button onclick="traerDatosArchivo()">Obtener datos</button>
+    </div>
+
+    <div id="contenido">
+        <!-- Aquí insertaremos contenido del archivo de texto1.txt -->
+    </div>
+
+
+
+    <!-- Nuestro script ------------------------------>
+    <script>
+        var HTML_a_mostrar = document.querySelector('#contenido');
+
+        function traerDatosArchivo() {
+            fetch('texto1.txt') // Archivo a leer
+                .then(data => data.text())
+                .then(data => HTML_a_mostrar.innerHTML = data)
+        }
+    </script>
+
+
+</body>
+
+</html>

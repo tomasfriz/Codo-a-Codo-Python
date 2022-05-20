@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch (API)</title>
+</head>
+
+<body>
+    <h3>Fetch (API)</h3>
+    <hr>
+
+    <div>
+        <button onclick="traerDatosAPI()">Obtener</button>
+    </div>
+
+    <div id="contenido">
+        <!-- Aquí insertaremos contenido del archivo JSON -->
+    </div>
+
+    <!-- Nuestro script ------------------------------>
+    <script>
+        function traerDatosAPI() {
+            fetch('https://randomuser.me/api') //Esta API provee datos en formato json
+                .then(datos => datos.json()) //res va a guardar el dato mediante el método .json()
+                .then(datos => {
+                    contenido.innerHTML =
+                        `<img src = "${datos.results[0].picture.large}"</img>
+                         <p>Nombre: ${datos.results[0].name.first}</p>
+                         <p>Mail: ${datos.results[0].email}</p>`
+                })
+        }
+    </script>
+
+
+</body>
+
+</html>

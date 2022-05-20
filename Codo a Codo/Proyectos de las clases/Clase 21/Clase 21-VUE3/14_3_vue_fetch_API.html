@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE - Fetch (API)</title>
+    <style>
+        .flex-container {
+            display: inline-flex;   /* Esta propiedad define al div como contenedor flex*/
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .flex-container > div {  /*Utilizamos selectores avanzados en lugar de clases */
+            color: blue;
+            margin: 5px;
+            padding: 2px;
+            font-size: 10px;
+        }        
+    </style>
+</head>
+
+<body>
+    <h3>Fetch (API) con VUE - Varios registros</h3>
+    <hr>
+
+    <div id="contenido">
+        <div><button onclick="app.traerDatosAPI()">Obtener datos</button></div>
+        <!-- Aquí insertaremos contenido del archivo JSON -->
+        <div v-html="HTML_a_mostrar"  class="flex-container"></div>
+    </div>
+
+
+    <!-- Referencia al CDN de vue  ------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Y aqui colocamos nuestro script ------------------------------>
+    <script>
+        var app = new Vue({
+            el: '#contenido',
+            data: {
+                HTML_a_mostrar: ""
+            },
+
+            methods: {
+                traerDatosAPI: function() {
+                    fetch('https://randomuser.me/api') //Esta API provee datos en formato json
+                        .then(datos => datos.json()) //res va a guardar el dato mediante el método .json()
+                        .then(datos => this.HTML_a_mostrar +=
+                            `<div><img src = "${datos.results[0].picture.large}"</img>
+                             <p>Nombre: ${datos.results[0].name.first}<br>
+                                Mail: ${datos.results[0].email}</p></div>`)
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
