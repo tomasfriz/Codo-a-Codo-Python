@@ -1,0 +1,52 @@
+# ------------------------------------------------------------
+# Encapsulacion:
+# encapsular consiste en hacer que los atributos o métodos 
+# internos a una clase no se puedan acceder ni modificar desde
+# fuera, sino que tan solo el propio objeto pueda acceder a ellos.
+# ------------------------------------------------------------
+
+# Creamos la clase "Coche":
+
+class Coche():
+	# Metodo constructor (Estado inicial)
+    def __init__(self):
+        self.ruedas      = 4     
+        self.largoChasis = 280
+        self.anchoChasis = 145
+        self.en_marcha   = False
+
+    # Metodos --------------------------------
+    def arrancar(self, arrancamos):
+        self.en_marcha = arrancamos
+        if self.en_marcha:
+            if self.chequeo_interno() == False:
+                return "El coche no puede arrancar"
+            else:
+                return "El coche está OK y ha arrancado"
+        else:
+            return "El coche se ha detenido"
+
+    # Método que comprueba el "estado interno" del coche
+    def chequeo_interno(self):
+        print("Comprobando el coche:")
+        self.combustible = "Ok"
+        self.puertas     = "Cerradas"
+        if self.combustible == "Ok" and self.puertas == "Cerradas":
+            return True
+        else:
+            return False
+
+
+# ------------------------------------------------------------
+# Bloque principal
+# ------------------------------------------------------------
+print("\033[H\033[J")             # Limpiamos la pantalla
+
+coche1 = Coche()            
+print(coche1.ruedas)
+coche1.ruedas = 6                 # Esto no se deberia permitir...
+print(coche1.ruedas)
+
+print(coche1.chequeo_interno())   # Esto no se deberia permitir...
+
+# Ver ejemplo encapsulacion2.py para ver como solucionar todo esto :)
